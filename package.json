@@ -1,0 +1,15 @@
+{
+  "name": "crispy-syntax",
+  "theme": "syntax",
+  "version": "0.0.1",
+  "description": "Crispy colors",
+  "keywords": [
+    "syntax",
+    "theme"
+  ],
+  "repository": "https://github.com/bryankennedy/crispy-syntax",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
