@@ -63,22 +63,11 @@ atom-text-editor .search-results .marker.current-result .region,
 }
 
 .comment {
-  color: @light-gray;
-}
-
-.entity {
-  &.name.type {
-    color: @light-orange;
-    text-decoration: underline;
-  }
-
-  &.other.inherited-class {
-    color: @green;
-  }
+  color: @slate;
 }
 
 .keyword {
-  color: @purple;
+  color: @salmon;
 
   &.control {
     color: @purple;
@@ -97,8 +86,9 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 }
 
+// TODO: What is storage?
 .storage {
-  color: @purple;
+  color: @salmon;
 }
 
 .constant {
@@ -139,7 +129,10 @@ atom-text-editor .search-results .marker.current-result .region,
 }
 
 .string {
-  color: @green;
+  color: @lime-green;
+  &.double {
+    color: @army-green;
+  }
 
 
   &.regexp {
@@ -205,12 +198,21 @@ atom-text-editor .search-results .marker.current-result .region,
 }
 
 .entity {
+  &.name.type {
+    color: @periwinkle;
+    text-decoration: underline;
+  }
+
+  &.other.inherited-class {
+    color: @green;
+  }
+
   &.name.function {
     color: @blue;
   }
 
   &.name.class, &.name.type.class {
-    color: @light-orange;
+    color: @periwinkle;
   }
 
   &.name.section {
@@ -308,4 +310,11 @@ atom-text-editor .search-results .marker.current-result .region,
 atom-text-editor[mini] .scroll-view,
 :host([mini]) .scroll-view {
   padding-left: 1px;
+}
+
+atom-text-editor::shadow atom-text-editor-minimap::shadow .minimap-visible-area,
+atom-text-editor atom-text-editor-minimap::shadow .minimap-visible-area,
+html atom-text-editor-minimap::shadow .minimap-visible-area {
+  opacity: .25;
+  background: @salmon;
 }
